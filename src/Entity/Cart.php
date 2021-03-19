@@ -20,7 +20,7 @@ class Cart
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="cart")
+     * @ORM\ManyToMany(targetEntity=Product::class, inversedBy="cart")
      */
     private $product;
 
@@ -30,7 +30,7 @@ class Cart
     private $User;
 
     /**
-     * @ORM\OneToMany(targetEntity=Options::class, mappedBy="cart")
+     * @ORM\ManyToMany(targetEntity=Options::class, inversedBy="cart")
      */
     private $options;
 

@@ -35,7 +35,7 @@ class Options
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Cart::class, inversedBy="options")
+     * @ORM\ManyToMany(targetEntity=Cart::class, inversedBy="options")
      */
     private $cart;
 
